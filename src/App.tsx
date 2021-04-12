@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from 'react'
+import bg from './img/fearlessLogo.png'
 import './App.css';
+import CounterComponent from './counterComponent/counterComponent'
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <img src={bg} className="fearless-logo" alt="logo" />
+        <CounterComponent 
+          apiKey={'1ccb732e-b55a-4404-ad3f-0f99c02fe44e'}
+          namespace={'fearless.tech'}
+        />
     </div>
   );
 }
